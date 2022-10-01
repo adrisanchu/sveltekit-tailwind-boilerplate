@@ -1,6 +1,12 @@
-<script>
+<script lang="ts">
 	import '$lib/tailwind.css';
+	import type { NavItem } from '$lib/types';
 	import MenuBlock from '$lib/components/MenuBlock/MenuBlock.svelte';
+
+	let items: NavItem[] = [
+		{ href: '/breadcrumbs', label: 'Breadcrumbs', children: [] },
+		{ href: '/menublock', label: 'Menu block', children: [] }
+	];
 </script>
 
 <div class="drawer drawer-mobile">
@@ -13,9 +19,7 @@
 	<div class="drawer-side">
 		<label for="my-drawer-2" class="drawer-overlay" />
 		<ul class="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
-			<MenuBlock />
-			<MenuBlock />
-			<MenuBlock />
+			<MenuBlock menuTitle={'Components'} {items} />
 		</ul>
 	</div>
 </div>

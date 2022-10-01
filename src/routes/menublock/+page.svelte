@@ -1,0 +1,1 @@
+<p>Menu block</p>

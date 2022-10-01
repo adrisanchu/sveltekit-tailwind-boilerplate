@@ -1,8 +1,14 @@
+<script lang="ts">
+	import type { NavItem } from '$lib/types';
+	export let items: NavItem[] = [];
+	export let menuTitle = 'Menu Title';
+</script>
+
 <ul class="menu p-3 bg-base-200 rounded-xl">
 	<li class="menu-title">
-		<span>Menu Title</span>
+		<span>{menuTitle}</span>
 	</li>
-	<li><a href="/">First Menu Item</a></li>
-	<li><a href="/">Second Menu Item</a></li>
-	<li><a href="/">Third Menu Item</a></li>
+	{#each items as { href, label }}
+		<li><a {href}>{label}</a></li>
+	{/each}
 </ul>
