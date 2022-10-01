@@ -18,7 +18,7 @@
 	</div>
 	<div class="drawer-side">
 		<label for="my-drawer-2" class="drawer-overlay" />
-		<ul class="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
+		<ul class="menu overflow-y-auto w-80 bg-base-100 text-base-content">
 			<MenuBlock menuTitle={'Components'} {items} />
 		</ul>
 	</div>
